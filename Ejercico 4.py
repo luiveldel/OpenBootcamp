@@ -1,12 +1,7 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 def print_100_inv():
+    list_sorted = sorted([x for x in range(1, 101)], reverse=True)
+    print(list_sorted)
 
 
-
-if __name__ == '__main__':
+if '__main__' == __name__:
     print_100_inv()
