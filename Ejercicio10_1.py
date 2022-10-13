@@ -5,7 +5,7 @@ y que contenga un botón de reinicio para que deje todo como al principio.
 Al principio no tiene que haber una opción seleccionada.
 
 """
-import sys
+
 import tkinter
 from tkinter import ttk  # Ttk aplica cierto estilo
 
@@ -38,15 +38,12 @@ def reboot(event):
     window.destroy()
     pop_window()
 
-def election():
-    reboot()
-    pop_window()
 
 
 selected = tkinter.StringVar()
-r1 = ttk.Radiobutton(window, text='Yes', value='1', variable=selected, command=election)
-r2 = ttk.Radiobutton(window, text='No', value='2', variable=selected, command=election)
-r3 = ttk.Radiobutton(window, text='Maybe', value='3', variable=selected, command=election)
+r1 = ttk.Radiobutton(window, text='Yes', value='1', variable=selected, command=reboot)
+r2 = ttk.Radiobutton(window, text='No', value='2', variable=selected, command=reboot)
+r3 = ttk.Radiobutton(window, text='Maybe', value='3', variable=selected, command=reboot)
 
 # Positioning
 r1.grid(column=0, row=1, pady=5, padx=5)
